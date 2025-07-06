@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Vote | Garra Estudantil 2025</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function atualizarContador() {
+      const destino = new Date("2025-07-07T00:00:00").getTime();
+      const agora = new Date().getTime();
+      const diferenca = destino - agora;
+      const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+      document.getElementById("contador").innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    }
+    setInterval(atualizarContador, 1000);
+  </script>
+</head>
+<body>
+
+  <header class="boas-vindas">
+    <h1>Garra Estudantil 2025</h1>
+    <p class="slogan">Força, voz e atitude para o IFAM de todos!</p>
+    <p class="eleicao">🗳️ Contagem regressiva para as eleições: <span id="contador">Carregando...</span></p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="propostas.html">Propostas</a>
+    <a href="equipe.html">Equipe</a>
+    <a href="mascote.html">Mascote</a>
+    <a href="mensagens.html">Mensagens</a>
+  </nav>
+
+  <section class="destaque">
+  <h2>Por que a Garra Estudantil?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Representatividade</h3>
+      <p>Damos voz real ao estudante em todas as decisões do IFAM.</p>
+    </div>
+    <div class="card">
+      <h3>Atitude</h3>
+      <p>Somos uma força ativa que luta por melhorias de verdade.</p>
+    </div>
+    <div class="card">
+      <h3>Compromisso</h3>
+      <p>Estamos com você antes, durante e depois das eleições.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="rodape">
+  <div class="rodape-conteudo">
+    <p>&copy; 2025 Garra Estudantil</p>
+    <p>Feito com ❤️ por estudantes do IFAM</p>
+  </div>
+</footer>
+
+</body>
+</html>
